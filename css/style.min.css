@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -317,7 +317,7 @@ img {
     background-position: 0px 0px;
     background-repeat: no-repeat; }
   .piggy-icon.lyn {
-    background: url(/image/profile/lyn.jpg);
+    background: url(/image/profile/lyn.JPG);
     background-size: cover;
     background-position: -10px 0px;
     background-repeat: no-repeat; }
