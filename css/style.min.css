@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -210,8 +210,8 @@ img {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  -webkit-column-count: 2;
-          column-count: 2;
+  -webkit-column-count: 4;
+          column-count: 4;
   -webkit-column-gap: 100px;
           column-gap: 100px; }
 
@@ -290,6 +290,20 @@ img {
     width: 100%;
     height: 100%; }
 
+.image-grid img {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  cursor: pointer; }
+  .image-grid img:hover {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s; }
+
 .piggy-icon {
   width: 100px;
   height: 100px;
@@ -337,44 +351,26 @@ img {
     background-position: -12px 0px;
     background-repeat: no-repeat; }
 
-.icon-container {
-  margin: 50px 0; }
-  .icon-container .piggy-icon {
-    position: relative;
-    bottom: 0px;
-    border: 5px solid #3B3738;
-    -webkit-transition: border-color 500ms ease-out;
-    transition: border-color 500ms ease-out; }
-  .icon-container .col:hover .piggy-icon {
-    -webkit-animation-name: hover-icon;
-            animation-name: hover-icon;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    position: absolute;
-    border-color: #fac07c;
-    -webkit-transition: border-color 500ms ease-out;
-    transition: border-color 500ms ease-out; }
-  .icon-container .show-all-grid {
-    padding: 20px 0 0;
-    display: block;
-    cursor: pointer; }
+.img-fluid {
+  margin-top: 30px; }
 
-.picture-grid .grid-item {
-  width: 25%;
-  padding: 5px;
-  cursor: pointer;
-  -webkit-transition: all 200ms ease-out;
-  transition: all 200ms ease-out; }
-  .picture-grid .grid-item:hover {
-    padding: 0px; }
+.wow-removed {
+  visibility: visible !important;
+  -webkit-animation-name: none !important;
+          animation-name: none !important; }
 
 footer {
-  min-height: 300px;
   background: #3B3738;
   margin-top: 30px;
   border-top: 5px solid #fac07c; }
+  footer .copyright {
+    display: block;
+    color: #fac07c;
+    text-align: center;
+    padding: 10px; }
+
+.no-scroll {
+  overflow: hidden; }
 
 .image-modal {
   position: fixed;
@@ -383,7 +379,7 @@ footer {
   right: 0;
   bottom: 0;
   z-index: 999;
-  background: #3B3738;
+  background: rgba(59, 55, 56, 0.96);
   display: none; }
   .image-modal i.fa-times {
     color: #fac07c;
@@ -418,30 +414,6 @@ footer {
     bottom: 10px; }
   100% {
     bottom: 30px; } }
-
-@-webkit-keyframes hover-icon {
-  0% {
-    bottom: 0px; }
-  25% {
-    bottom: 30px; }
-  50% {
-    bottom: 0px; }
-  75% {
-    bottom: 30px; }
-  100% {
-    bottom: 0px; } }
-
-@keyframes hover-icon {
-  0% {
-    bottom: 0px; }
-  25% {
-    bottom: 30px; }
-  50% {
-    bottom: 0px; }
-  75% {
-    bottom: 30px; }
-  100% {
-    bottom: 0px; } }
 
 @-webkit-keyframes fadeIn {
   0% {
