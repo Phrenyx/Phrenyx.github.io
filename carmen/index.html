@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- floating background hearts -->
+  <div class="bg-hearts" aria-hidden="true">
+    <span style="--i:0">💕</span>
+    <span style="--i:1">💗</span>
+    <span style="--i:2">❤</span>
+    <span style="--i:3">💖</span>
+    <span style="--i:4">💘</span>
+    <span style="--i:5">💓</span>
+    <span style="--i:6">♥</span>
+    <span style="--i:7">💞</span>
+    <span style="--i:8">💝</span>
+    <span style="--i:9">💗</span>
+  </div>
+
+  <main class="card">
+    <h1>Will you be my Valentine?</h1>
+    <p class="sub">Choose wisely ❤️</p>
+
+    <div class="buttons" id="buttonsWrap">
+      <button id="yesBtn" class="btn yes">Yes <span class="heart">♥</span></button>
+      <button id="noBtn" class="btn no" aria-hidden="false">No</button>
+    </div>
+
+    <div class="disco-area" aria-hidden="true">
+      <div class="disco-lights" aria-hidden="true"></div>
+      <div class="dancing-rats">
+        <span class="rat" role="img" aria-label="dancing rat">🐀</span>
+        <span class="rat" role="img" aria-label="dancing rat">🐀</span>
+        <span class="rat" role="img" aria-label="dancing rat">🐀</span>
+        <span class="rat" role="img" aria-label="dancing rat">🐀</span>
+        <span class="rat" role="img" aria-label="dancing rat">🐀</span>
+      </div>
+      <div class="disco-floor" aria-hidden="true"></div>
+    </div>
+
+    <div class="hearts" aria-hidden="true"></div>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="popup">
+        <h2>Yay! 💖</h2>
+        <p>You are the most beautiful woman on this earth! I love you! 💕</p>
+        <button id="closeOverlay" class="btn yes">Close</button>
+      </div>
+    </div>
+    <!-- Rat video overlay (hidden until a rat is clicked) -->
+    <div id="ratVideoOverlay" class="overlay hidden" aria-hidden="true">
+      <div class="popup video-popup">
+        <button id="closeRatVideo" class="btn no">X</button>
+        <div class="video-wrapper">
+          <iframe id="ratVideoIframe" src="" title="Rat video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="rat-dj-wrap">
+      <button id="ratBtn" class="btn rat-btn" aria-label="Play rat video">Rat DJ</button>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
